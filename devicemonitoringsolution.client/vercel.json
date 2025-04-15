@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "./dist/device-monitoring.client/**",
+      "src": "./dist/devicemonitoringsolution.client/**",
       "use": "@vercel/static"
     }
   ],
