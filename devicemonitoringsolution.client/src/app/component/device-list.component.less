@@ -1,0 +1,52 @@
+.device-list-container {
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .no-devices {
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .device-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .device-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    &.selected {
+      border-color: #1976d2;
+      background-color: #f0f8ff;
+    }
+
+    .device-info {
+      h3 {
+        margin: 0 0 10px 0;
+        color: #1976d2;
+      }
+
+      p {
+        margin: 5px 0;
+        color: #666;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="app-container">
+  <h1>Device Monitoring</h1>
+  <div class="content">
+    <app-device-list (deviceSelected)="onDeviceSelected($event)">
+    </app-device-list>
+    <app-device-details [deviceId]="selectedDeviceId"></app-device-details>
+  </div>
+</div>

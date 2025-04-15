@@ -1,0 +1,24 @@
+<div class="device-details-container" *ngIf="deviceId">
+  <h2>Device Activity</h2>
+  <div *ngIf="activities.length === 0" class="no-activities">
+    No activities found for this device.
+  </div>
+  <table *ngIf="activities.length > 0" class="activity-table">
+    <thead>
+      <tr>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Duration</th>
+        <th>Version</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activities">
+        <td>{{ activity.startTime | date:'medium' }}</td>
+        <td>{{ activity.endTime | date:'medium' }}</td>
+        <td>{{ calculateDuration(activity.startTime, activity.endTime) }}</td>
+        <td>{{ activity.version }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

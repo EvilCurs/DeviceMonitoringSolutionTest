@@ -1,0 +1,19 @@
+<div class="device-list-container">
+  <h2>Devices</h2>
+  <div *ngIf="devices.length > 0; else noDevices" class="device-cards">
+    <div *ngFor="let device of devices"
+         class="device-card"
+         [class.selected]="selectedDeviceId === device.deviceId"
+         (click)="selectDevice(device.deviceId)">
+      <div class="device-info">
+        <h3>{{ device.name }}</h3>
+        <p>Device ID: {{ device.deviceId }}</p>
+        <p>Version: {{ device.version }}</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noDevices>
+    <div class="no-devices">No devices available</div>
+  </ng-template>
+</div>
